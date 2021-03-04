@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+    <record id="view_pos_session_form_inherit" model="ir.ui.view">
+        <field name="name">pos.session.form.view</field>
+        <field name="model">pos.session</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_session_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='cash_register_balance_start']" position="replace">
+                <field name="cash_register_balance_start" invisible="1"/>
+            </xpath>
+            <xpath expr="//field[@name='cash_register_total_entry_encoding']" position="replace">
+                <field name="cash_register_total_entry_encoding" invisible="1"/>
+            </xpath>
+            <xpath expr="//field[@name='cash_register_balance_end']" position="replace">
+                <field name="cash_register_balance_end" invisible="1"/>
+            </xpath>
+            <xpath expr="//field[@name='cash_register_balance_end_real']" position="replace">
+                <field name="cash_register_balance_end_real" invisible="1"/>
+            </xpath>
+            <xpath expr="//field[@name='cash_register_difference']" position="replace">
+                <field name="cash_register_difference" invisible="1"/>
+            </xpath>
+            <xpath expr="//field[@name='statement_ids']" position="replace">
+                <field name="statement_ids" invisible="1"/>
+            </xpath>
+        </field>
+    </record>
+</data>
+</odoo>
